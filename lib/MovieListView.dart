@@ -70,7 +70,7 @@ class MovieList extends StatelessWidget {
         child: Card(
           color: Colors.purple,
           child: Padding(
-            padding: const EdgeInsets.only(top: 8.0,bottom: 8),
+            padding: const EdgeInsets.only(top: 5.0,bottom: 8),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -81,13 +81,17 @@ class MovieList extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
 
-                        Flexible(child: Text(moviedetails.title,
-                          style: TextStyle(
-                            color: Colors.purple.shade50,
-                            fontSize: 20,
-                            fontWeight: FontWeight.w500,
-                          ),
-                        )),
+                        Flexible(
+                            child: Padding(
+                              padding: const EdgeInsets.only(left: 2,right: 5),
+                              child: Text(moviedetails.title,
+                                                        style: TextStyle(
+                              color: Colors.purple.shade50,
+                              fontSize: 18,
+                              fontWeight: FontWeight.w500,
+                                                        ),textAlign: TextAlign.left,
+                                                      ),
+                            )),
 
                         Text("Episodes: ${moviedetails.episodes}",style: mainTextStyle(),),
                       ]
